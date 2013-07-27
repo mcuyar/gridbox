@@ -1,0 +1,15 @@
+{
+    "name": "mcuyar/gridbox",
+    "description": "Theme framework based on HTML5 Boilerplate and twitter/bootstrap",
+    "require": {
+        "twitter/bootstrap": "dev-3.0.0-wip"
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Matthew Cuyar",
+            "email": "matt@fuelingbrands.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
