@@ -1,8 +1,8 @@
 <?php $domain = "bootstrap"; ?>
 
 <!DOCTYPE html>
-<!--[if IE 8 ]>    <html dir="ltr" lang="en-US" class="no-js ie ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="no-js ie ie9"> <![endif]-->
+<!--[if IE 8 ]> <html dir="ltr" lang="en-US" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html dir="ltr" lang="en-US" class="no-js ie ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> 
 <html class="no-js" dir="ltr" lang="en-US">
 <!--<![endif]-->
@@ -39,17 +39,17 @@
 
         <!--[if (lt IE 9) ]><! internet explorer 8 stylesheet / html5 support -->
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <link rel="stylesheet" id="ie8-css"  href="http://<?=$domain?>/assets/ie.css"/>
+            <link rel="stylesheet" href="http://<?=$domain?>/assets/ie.css"/>
         <!--<![endif]-->
         <!--[if (gte IE 9)|!(IE)]><! modern browser stylesheet -->
 		    <link rel="stylesheet" href="http://<?=$domain?>/assets/style.css"/>
         <!--<![endif]-->
         
-        <?="\n" //script that must load in head - jquery should be presentational and loaded in the footer ?>
+        <?="\n" //scripts that must fire before pageload - jquery should be presentational and loaded in the footer ?>
         <script src="http://<?=$domain?>/assets/js/head.js"></script>
     </head>
     <body id="front" class="home"> <!-- ID should be generic: blog | category | single | calendar, Class should be specific -->
-        <div id="accessibility">
+        <div id="accessibility"> <!-- style should be set to display:none or visibility:hidden -->
             <a href="#primary-menu">Skip to Navigation</a> |
             <a href="#primary-content">Skip to Content</a>
         </div>
@@ -92,7 +92,7 @@
     				<!-- content-bottom --> 
     				<!-- margin-top --> 
     				<aside id="primary-sidebar" class="margin">
-    					<!-- margin --> 
+    				    <!-- margin --> 
     				</aside>
     				<!-- margin-bottom -->
     			</article>
