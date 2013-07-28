@@ -1,0 +1,281 @@
+/*---------------------------------------------------
+		LESS Elements 0.5
+	---------------------------------------------------
+		A set of useful LESS mixins by Dmitry Fadeyev
+		Special thanks for mixin suggestions to:
+			Kris Van Herzeele,
+			Benoit Adam,
+			Portenart Emile-Victor
+			
+		More info at: http://lesselements.com
+-----------------------------------------------------*/
+
+.font-size(@n:@fontsize,@m:1,@b:@line-height) 
+{
+	font-size: @n * 1px; 
+	line-height: @b * @m * 1px;
+	margin-bottom: @b * 1px;
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF)
+{
+	background: @color;
+	background: -webkit-gradient(linear, left bottom, left top, @start,  @stop);
+	background: -moz-linear-gradient(center bottom,  @start 0%, @stop 100% );
+}
+
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) 
+{
+	background: @color;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(@start,@start,@start)), color-stop(1, rgb(@stop,@stop,@stop)));
+	background: -moz-linear-gradient(center bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100% );
+}
+
+.bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) 
+{
+	border-top: solid 1px @top-color;
+	border-left: solid 1px @left-color;
+	border-right: solid 1px @right-color;
+	border-bottom: solid 1px @bottom-color;
+}
+
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1)
+{
+	-webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+	-moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+	box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+.rounded(@radius: 2px)
+{
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0)
+{
+	-webkit-border-top-right-radius: @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius: @bottomleft;
+	-webkit-border-top-left-radius: @topleft;
+	-moz-border-radius-topright: @topright;
+	-moz-border-radius-bottomright: @bottomright;
+	-moz-border-radius-bottomleft: @bottomleft;
+	-moz-border-radius-topleft: @topleft;
+	border-top-right-radius: @topright;
+	border-bottom-right-radius: @bottomright;
+	border-bottom-left-radius: @bottomleft;
+	border-top-left-radius: @topleft;
+}
+
+.opacity(@opacity: 0.5)
+{
+	-moz-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	-webkit-opacity: @opacity;
+	opacity: @opacity;
+}
+
+.transition-duration(@duration: 0.2s)
+{
+	-moz-transition-duration: @duration;
+	-webkit-transition-duration: @duration;
+	transition-duration: @duration;
+}
+
+.rotation(@deg:5deg)
+{ 
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+
+.scale(@ratio:1.5)
+{
+	-webkit-transform:scale(@ratio);
+ 	-moz-transform:scale(@ratio);
+	transform:scale(@ratio);
+}
+
+.transition(@duration:0.2s, @ease:ease-out)
+{
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4)
+{
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+	box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow(@arguments)
+{
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+
+.contentBoxShadow (@pix: 13px, @alpha: .35 )
+{
+	
+  	-moz-box-shadow: 0px 0px @pix rgba(0,0,0,@alpha); 
+	-webkit-box-shadow: 0px 0px @pix rgba(0,0,0,@alpha); 
+    box-shadow: 0px 0px @pix rgba(0,0,0,@alpha); 
+    zoom: 1;
+    position: relative;
+}
+
+.overviewBoxShadow (@pix: 13px, @color: #000)
+{
+	
+  	-moz-box-shadow: 0px 0px @pix @color; 
+	-webkit-box-shadow: 0px 0px @pix @color; 
+    box-shadow: 0px 0px @pix @color;
+}
+
+.box-rotate( @deg:90deg ) 
+{  
+  -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
+     -moz-transform: rotate(-90deg);  /* FF3.5+ */
+      -ms-transform: rotate(-90deg);  /* IE9 */
+       -o-transform: rotate(-90deg);  /* Opera 10.5 */
+          transform: rotate(-90deg);
+}
+
+
+.noBoxShadow
+{
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+//-----------------------------------------------------------------------
+//	= Drop Shadows
+//  = http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+//-----------------------------------------------------------------------
+
+.ds-container
+{
+	z-index:1;
+	position:relative;
+}
+
+.drop-shadow 
+{
+	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(136, 110, 89, 0.3), 0 0 40px rgba(136, 110, 89, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(136, 110, 89, 0.3), 0 0 40px rgba(136, 110, 89, 0.1) inset;
+            box-shadow:0 1px 4px rgba(136, 110, 89, 0.3), 0 0 40px rgba(136, 110, 89, 0.1) inset;
+}
+
+.drop-shadow-trans
+{
+	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(136, 110, 89, 0), 0 0 40px rgba(136, 110, 89, 0) inset;
+       -moz-box-shadow:0 1px 4px rgba(136, 110, 89, 0), 0 0 40px rgba(136, 110, 89, 0) inset;
+            box-shadow:0 1px 4px rgba(136, 110, 89, 0), 0 0 40px rgba(136, 110, 89, 0) inset;
+}
+
+.drop-shadow:before,
+.drop-shadow:after,
+.drop-shadow-trans:before,
+.drop-shadow-trans:after
+
+{
+    content:"";
+    position:absolute;
+    z-index:-2;
+}
+
+/* Curled corners */
+
+.curled 
+{
+    -moz-border-radius:0 0 120px 120px / 0 0 6px 6px;
+         border-radius:0 0 120px 120px / 0 0 6px 6px;
+}
+
+.curled:before,
+.curled:after 
+{
+    bottom:12px;
+    left:10px;
+    width:50%;
+    height:55%;
+    max-width:200px;
+    max-height:100px;
+    -webkit-box-shadow:0 8px 12px rgba(136, 110, 89,0.9);
+       -moz-box-shadow:0 8px 12px rgba(136, 110, 89,0.9);
+            box-shadow:0 8px 12px rgba(136, 110, 89,0.9);
+    -webkit-transform:skew(-8deg) rotate(-3deg);
+       -moz-transform:skew(-8deg) rotate(-3deg);
+        -ms-transform:skew(-8deg) rotate(-3deg);
+         -o-transform:skew(-8deg) rotate(-3deg);
+            transform:skew(-8deg) rotate(-3deg);
+}
+
+.curled:after 
+{    
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+/* Curved shadows */
+
+.curved:before 
+{
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:50%;
+    -webkit-box-shadow:0 0 10px rgba(136, 110, 89,0.9);
+    -moz-box-shadow:0 0 10px rgba(136, 110, 89,0.9);
+    box-shadow:0 0 10px rgba(136, 110, 89,0.9);
+    -moz-border-radius:25% / 100%;
+    border-radius:100% / 5%;
+}
+
+.curved-vt-2:before 
+{ 
+	right:0;
+	 -moz-border-radius:4%;
+    border-radius:4%;
+}
+
+.curved-hz-1:before 
+{
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius: 100% / 5%;
+    border-radius: 100% / 5%;
+}
+
+.curved-hz-2:before {
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius: 100% / 5%;
+    border-radius: 100% / 5%;
+}
+
+.curved-hz-3:before 
+{
+    top:0;
+    bottom:10%;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100% / 5%;
+    border-radius:100% / 5%;
+}

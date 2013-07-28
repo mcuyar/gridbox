@@ -1,0 +1,108 @@
+//-----------------------------------------------------------------------
+// = Mobile Phones: Portrait
+//----------------------------------------------------------------------
+
+@media only screen and (max-width: 479px)
+{
+    body:after 
+	{
+	    content: "target-320";
+	    display: none;
+    }
+}
+
+//-----------------------------------------------------------------------
+// = Mobile Phones: Landscape
+//-----------------------------------------------------------------------
+
+@media only screen and (min-width: 480px) and (max-width: 599px)
+{			
+	body:after 
+	{
+	    content: "target-480";
+	    display: none;
+	}
+}
+
+//-----------------------------------------------------------------------
+// = Phablets / Kindle fires
+//-----------------------------------------------------------------------
+
+@media only screen and (min-width: 600px) and (max-width: 767px)
+{		
+	body:after 
+	{
+		content: "target-640";
+		display: none;
+	}
+}
+
+//-----------------------------------------------------------------------
+// = Tablet Portrait
+//-----------------------------------------------------------------------
+
+@media  only screen and (min-width: 768px) and (max-width: 959px)
+{			
+	//Setup Selective Jquery Target
+	body:after 
+	{
+	    content: "target-768";
+	    display: none;
+	}
+}
+
+//-----------------------------------------------------------------------
+// = Desktop / Tablet Landscape
+//-----------------------------------------------------------------------
+
+@media only screen and (min-width: 960px) 
+{ 
+    body:after 
+	{
+	    content: "target-960";
+	    display: none;
+	} 
+}
+
+//-----------------------------------------------------------------------
+// = High-res extended desktop
+//-----------------------------------------------------------------------
+@media only screen and (min-width: 1279px)
+{	
+
+}
+
+//-----------------------------------------------------------------------
+// = Get Mobile Android Phones/Tablets
+// http://pugetworks.com/blog/2011/04/css-media-queries-for-targeting-different-mobile-devices/
+// Targets: low density (ldpi), medium density (mdpi), high density (hdpi)	
+//-----------------------------------------------------------------------
+	
+@media
+only screen and (-webkit-device-pixel-ratio:.75), 
+only screen and (-webkit-device-pixel-ratio:1) and (max-device-width: 1024px), 
+only screen and (-webkit-device-pixel-ratio:1.5)
+{
+	body:after 
+	{
+		content: "mobile-android";
+		display: none;
+	}
+}
+
+//-----------------------------------------------------------------------
+// = Target Only iOS devices
+// Targets: 3g, iphone 4 & 5, iPad
+//-----------------------------------------------------------------------
+
+@media 
+only screen and (max-device-width: 480px), 
+only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 768px), 
+only screen and (device-width: 768px)
+{
+	body:after
+    {
+	    content: "mobile-ios";
+        display: none;
+    }
+}

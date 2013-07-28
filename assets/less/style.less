@@ -1,0 +1,148 @@
+/**
+ * Gridbox Theme Framework
+ *
+ * This system is initially based off of the best practices from the 
+ * HTML5 Boilerplate (h5bp) using twitter bootstrap
+ *
+ * HTML5 Boilerplate: http://h5bp.com
+ * Twitter Bootstrap: https://github.com/twbs/bootstrap
+ *
+ * @version: 0.0.1
+ */
+
+/**
+ * About this file
+ *
+ * The style CSS is in short is a configuration file for rapid prototyping
+ * and front-end development. This should be used to remove or add any
+ * needed styles or style frameworks to the site.
+ *
+ */
+
+//-----------------------------------------------------------------------
+// = LESS Elements
+// A set of useful LESS mixins
+// @todo: cleanup elements file and rewrite mixins
+//----------------------------------------------------------------------- 
+    
+    @import "elements.less";
+
+//-----------------------------------------------------------------------
+// = Conditional CSS JS Helper
+// Generates body:after pseudo elements for triggering JS events
+// @note: check if this functionality is already available with twitter bootstrap
+// @todo: needs to be cleaned up for better device recognition
+//----------------------------------------------------------------------- 
+    
+    /**
+	 * We will be using the media queries to implement
+	 * Jeremy Keith's Conditional CSS:
+	 * http://adactio.com/journal/5429/
+	 *
+	 * @body_content: "conditional-css";
+	 *
+	 * Visit http://www.websitedimensions.com/ for a list of
+	 * screen dimensions
+	 *
+	 */	 
+    @import "conditional-css.less";
+
+//-----------------------------------------------------------------------
+//	= Site Fonts
+//  Import custom fonts for site use
+//-----------------------------------------------------------------------
+	
+	/**
+	 * Information about responsive Typography:
+	 * http://informationarchitects.net/blog/responsive-typography-the-basics/
+	 *
+	 */
+	@import "fonts.less";
+
+//-----------------------------------------------------------------------
+// = Twitter Bootstrap
+// load less files from twitter bootstrap 3.0
+// Any bootstrap files not needed for production should be commented out
+// @note: too unfamiliar with bootstrap to uncomment anything non-specific
+// @path: @{bootstrap-path}
+//----------------------------------------------------------------------- 
+
+    /* 
+     * Core variables
+     * Default Site Styles and Generic preferences (colors, text, etc)
+     */
+    @import "variables.less"; //copy of the defualt bootstrap variables.less
+    
+    /* 
+     * Twitter Bootstrap Config
+     */
+    @import "bootstrap.less";
+    
+    /* 
+     * Grid system
+     * Extends the bootstrap grid system
+     */
+    @import "gridbox.less";
+
+//-----------------------------------------------------------------------
+// = Generic Stylesheet
+// Default Site Styles with device independent CSS
+// overrides default twitter bootstrap styles
+//-----------------------------------------------------------------------
+    
+    @import "site.less";
+
+//-----------------------------------------------------------------------
+//	= Responsive Stylesheets
+//    Holds the main styles of the framework. This is the area
+//    where all major device style changes should take place.
+//-----------------------------------------------------------------------
+    
+	/* 
+	 *	Mobile (portrait orientation) 320px
+	 *	Break point: 479px
+	*/		
+	@import "320.less";
+	
+	/* 
+	 *	Mobile (landscape orientation) 480px
+	 *	Break point: 599px
+	*/
+	@import "480.less";
+		
+	/* 
+	 *	Small Tablet Portrait 600px 
+	 *	Break point: 767px
+	*/
+    @import "640.less";
+	
+	/* 
+	 *	Tablet Portrait 768px 
+	 *	Break point: 959px
+	*/	
+	@media  only screen and (min-width: 768px) { @import "768.less"; }
+	
+	/* 
+	 *	Tablet Portrait 768px 
+	 *	Break point: 959px
+	*/
+    @import "800.less";
+	
+	/* 
+	 *	Small Tablets/notebooks/desktop 960px 
+	 *	Break point: 1159px
+	*/	
+	//Leaving the media query here so we can import to the ie stylesheet without issues.
+	@media only screen and (min-width: 960px) { @import "960.less"; }
+	
+	/* 
+	 *	Desktop over 1280px 
+	 *	Break point: n/a
+	*/
+	@import "1280.less";
+	
+	/* 
+	 *	Tablet Landscape
+	*/
+	@import "tablet-landscape.less";
+	
