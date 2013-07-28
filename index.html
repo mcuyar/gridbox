@@ -1,75 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>    
+    <head>
+        <meta charset="utf-8" />
+        <title>Example | Website</title>
+        <base href="http://www.example.com/">
+        
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-       <!-- pre-wrapper --> 
-    	<div id="wrapper">
+        <div id="accessibility">
+            <a href="#primary-menu">Skip to Navigation</a> |
+            <a href="#primary-content">Skip to Content</a>
+        </div>
+        <!-- pre-wrapper --> 
+    	<div id="container">
     	   <!-- pre-header --> 
-    		<div id="header-outer" class="outer">
-    			<div id="header-inner" class="inner">
-    				<div id="header">
+    		<div class="header-outer outer">
+    			<div class="header-inner inner">
+    				<header id="header" role="banner">
     					<!-- header-top --> 
-    					<div id="logo-outer">
-    						<a href="" id="logo"></a>
+    					<div id="logo" class="logo logo-outer outer">
+    						<a href=""></a>
     					</div><!-- end #logo -->
-    					<div id="menu-outer">
+    					<nav id="primary-menu" class="menu-outer outer" role="navigation">
     						<ul class="menu"></ul>
-    					</div>
+    					</nav>
     					<!-- header-bottom --> 
-    				</div>
+    				</header>
     			</div>
     		</div>
-    	   <!-- post-header --> 
-    	   <!-- pre-upper --> 
-    		<div id="upper-outer" class="outer">
-    			<div id="upper-inner" class="inner">
-    				<!-- upper-top --> 
-    				<div id="upper">
-    					<!-- upper --> 
-    				</div>
-    				<!-- uppper-bottom --> 
-    			</div>
-    		</div>
-    	   <!-- post-header --> 
-    	   <!-- pre-content --> 
-    		<div id="content-outer" class="outer">
-    			<div id="content-inner" class="inner">
+            <!-- post-header --> 
+            <!-- pre-upper --> 
+            <div class="upper-outer outer">
+            	<div class="upper-inner inner">
+            		<!-- upper-top --> 
+            		<section id="upper" class="upper-content">
+            			<!-- upper --> 
+            		</section>
+            		<!-- uppper-bottom --> 
+            	</div>
+            </div>
+            <!-- post-header --> 
+            <!-- pre-content --> 
+    		<main class="content-outer outer" role="main">
+    			<article class="content-inner inner">
     				<!-- content-top --> 
-    				<div id="content">
+    				<section id="primary-content">
     					<!-- content --> 
-    				</div>
+    				</section>
     				<!-- content-bottom --> 
     				<!-- margin-top --> 
-    				<div id="margin">
+    				<aside id="primary-sidebar" class="margin">
     					<!-- margin --> 
-    				</div>
-    				<!-- margin-bottom --> 
-    			</div>
-    		</div>
-    	   <!-- post-content --> 
-    	   <!-- pre-lower --> 
-    		<div id="lower-outer" class="outer">
-    			<div id="lower-inner" class="inner">
+    				</aside>
+    				<!-- margin-bottom -->
+    			</article>
+    		</main>
+            <!-- post-content --> 
+            <!-- pre-lower --> 
+    		<div class="lower-outer outer">
+    			<div class="lower-inner inner">
     				<!-- lower-top --> 
-    				<div id="lower">
+    				<section id="lower" class="lower-content">
     					<!-- lower --> 
-    				</div>
+    				</section>
     				<!-- lower-bottom --> 
     			</div>
     		</div>
-    	   <!-- post-lower --> 
-    	   <!-- pre-footer --> 
+            <!-- post-lower --> 
+            <!-- pre-footer --> 
     		<div id="footer-outer" class="outer">
     			<div id="footer-inner" class="inner">
     				<!-- footer-top --> 
-    				<div id="footer">
+    				<footer id="footer">
     					<!-- footer --> 
-    				</div>
+    				</footer>
     				<!-- footer-bottom --> 
     			</div>
     		</div>
-    	   <!-- post-footer -->
-    	<!-- post-wrapper --> 
+            <!-- post-footer -->
+    	</div>
+    	<!-- post-wrapper -->
     </body>
 </html>
