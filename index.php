@@ -1,8 +1,8 @@
 <?php $domain = $_SERVER['HTTP_HOST']; ?>
 
 <!DOCTYPE html>
-<!--[if IE 8 ]> <html dir="ltr" lang="en-US" class="no-js ie ie8"> <![endif]-->
-<!--[if IE 9 ]> <html dir="ltr" lang="en-US" class="no-js ie ie9"> <![endif]-->
+<!--[if IE 8 ]> <html dir="ltr" lang="en-US" class="no-js ie ie8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<!--[if IE 9 ]> <html dir="ltr" lang="en-US" class="no-js ie ie9"> <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> 
 <html class="no-js" dir="ltr" lang="en-US">
 <!--<![endif]-->
@@ -14,7 +14,7 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="robots" content="index,follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="" />
         <meta name="application-name" content="Mediasation CMS" id="site-meta-data" <?="\n" //HTML5 allows id attribute for any html element ?>
             data-gaId="UA-XXXXX-Y" 
