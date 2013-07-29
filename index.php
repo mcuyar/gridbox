@@ -1,4 +1,4 @@
-<?php $domain = "bootstrap"; ?>
+<?php $domain = $_SERVER['HTTP_HOST']; ?>
 
 <!DOCTYPE html>
 <!--[if IE 8 ]> <html dir="ltr" lang="en-US" class="no-js ie ie8"> <![endif]-->
