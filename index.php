@@ -138,13 +138,33 @@
     				</div>
     				<!-- margin-bottom -->
     			</article>
+    			<section id="three-column-test" class="container">
+	    			<div class="col-6 col-sm-4 col-lg-3">
+	    				<div style="padding: 20px; background: #eee;">
+		    				<h2>This is a heading</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna vehicula, sodales nibh id, imperdiet urna. </p>
+	    				</div>
+	    			</div>
+	    			<div class="col-6 col-sm-4 col-lg-3">
+		    			<h2>This is a heading</h2>
+        				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna vehicula, sodales nibh id, imperdiet urna. </p>
+	    			</div>
+	    			<div class="col-6 col-sm-4 col-lg-3">
+		    			<h2>This is a heading</h2>
+        				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna vehicula, sodales nibh id, imperdiet urna. </p>
+	    			</div>
+	    			<div class="col-6 col-sm-12 col-lg-3">
+		    			<h2>This is a heading</h2>
+        				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna vehicula, sodales nibh id, imperdiet urna. </p>
+	    			</div>
+    			</section>
     		</main>
             <!-- post-content --> 
             <!-- pre-lower --> 
-    		<div class="lower-outer outer">
+    		<div id="subscibe-form" class="lower-outer outer">
     			<div class="lower-inner inner">
     				<!-- lower-top --> 
-    				<section id="lower" class="lower-content">
+    				<section class="lower lower-content">
     					<!-- lower --> 
     				</section>
     				<!-- lower-bottom --> 
