@@ -77,12 +77,6 @@
      * Twitter Bootstrap Config
      */
     @import "bootstrap.less";
-    
-    /* 
-     * Grid system
-     * Extends the bootstrap grid system
-     */
-    @import "gridbox.less";
 
 //-----------------------------------------------------------------------
 // = Generic Stylesheet
@@ -97,52 +91,27 @@
 //    Holds the main styles of the framework. This is the area
 //    where all major device style changes should take place.
 //-----------------------------------------------------------------------
+    /* 
+	 *	Phone To Tablet
+	 *	Break point: 728px
+	*/		
+	@media (min-width: @screen-tiny) { @import "screen-tiny.less"; }
     
 	/* 
-	 *	Mobile (portrait orientation) 320px
-	 *	Break point: 479px
+	 *	Tablet
+	 *	Break point: 728px
 	*/		
-	@import "320.less";
+	@media (min-width: @screen-tablet) { @import "screen-tablet.less"; }
 	
 	/* 
-	 *	Mobile (landscape orientation) 480px
-	 *	Break point: 599px
-	*/
-	@import "480.less";
-		
-	/* 
-	 *	Small Tablet Portrait 600px 
-	 *	Break point: 767px
-	*/
-    @import "640.less";
-	
-	/* 
-	 *	Tablet Portrait 768px 
-	 *	Break point: 959px
+	 *	Mobile
+	 *	Break point: 940px
 	*/	
-	@media  only screen and (min-width: 768px) { @import "768.less"; }
-	
-	/* 
-	 *	Tablet Portrait 768px 
-	 *	Break point: 959px
-	*/
-    @import "800.less";
-	
-	/* 
-	 *	Small Tablets/notebooks/desktop 960px 
-	 *	Break point: 1159px
+    @media (min-width: @screen-desktop) { @import "screen-desktop.less"; }
+    
+    /* 
+	 *	Mobile
+	 *	Break point: 1170px
 	*/	
-	//Leaving the media query here so we can import to the ie stylesheet without issues.
-	@media only screen and (min-width: 960px) { @import "960.less"; }
-	
-	/* 
-	 *	Desktop over 1280px 
-	 *	Break point: n/a
-	*/
-	@import "1280.less";
-	
-	/* 
-	 *	Tablet Landscape
-	*/
-	@import "tablet-landscape.less";
+	@media (min-width: @screen-large-desktop) { @import "screen-large-desktop.less"; }
 	

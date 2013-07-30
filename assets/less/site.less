@@ -1,0 +1,173 @@
+//-----------------------------------------------------------------------
+//	= General Setup CSS
+//-----------------------------------------------------------------------
+
+/* Quick class to clear floats */
+.clear { clear: both; }
+.clear-left { clear: left; }
+.clear-right { clear: right; }
+
+/* For image replacement */
+.ir 
+{ 
+	display: block; 
+	border: 0;
+	text-indent: -999em; 
+	overflow: hidden; 
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+	*line-height: 0;
+	
+	br { display: none; }
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden 
+{ 
+	display: none !important; 
+	visibility: hidden; 
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden
+{ 
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px;
+	
+	/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+	&.focusable:active,
+	&.visuallyhidden.focusable:focus
+	{
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+//-----------------------------------------------------------------------
+//	= General Setup CSS
+//-----------------------------------------------------------------------
+
+/* apply a natural box layout model to all elements */ 
+*, *:before, *:after, .border-box {
+    .box-sizing(border-box);
+}
+
+input {
+    .box-sizing(content-box);
+}
+
+/* apply a natural box layout model to all elements  */
+.content-box, .content-box-all * { 
+	.box-sizing(content-box);
+}
+
+//-----------------------------------------------------------------------
+//	= Fonts & Typography
+//-----------------------------------------------------------------------
+
+//Arial / Default
+.arial { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+//Georgia
+.georgia { font-family: Georgia, Times, "Times New Roman", serif; }
+
+body { 
+	//.arial;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    //Add custom font
+	font-weight: normal; 
+}
+
+//Font Shadow Styles
+.text-inset { text-shadow:#fff 0px 1px 0, #000 0 -1px 0; }
+.text-shadow { text-shadow: 1px 1px 3px #000000; }
+
+//Font Weights
+.normal { font-weight: normal; }
+.bold { font-weight: bold; }
+
+//Text Transforms
+.uppercase { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+
+//-----------------------------------------------------------------------
+//	= Body - generic styles
+//-----------------------------------------------------------------------
+
+body {		
+	min-width: 320px;
+	padding-top: 226px;
+}
+
+//Located inside the body tag and wraps all of the content on the page.
+#container { position: relative; }
+
+//-----------------------------------------------------------------------
+//	= Start Styling!
+//-----------------------------------------------------------------------
+
+.header-outer { 
+    background: #eee; 
+    padding-bottom: 0;
+    
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+#logo {
+    line-height: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 1.3em;
+}
+
+//-----------------------------------------------------------------------
+//	= Slider Generic
+//-----------------------------------------------------------------------
+
+#slider-generic {
+    background: #777;
+    position: relative;
+}
+
+.content-inner
+{
+    background: lighten(#eee, 5%);
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    padding: 20px;
+    .rounded(4px);
+}
+
+//-----------------------------------------------------------------------
+//	= Main Content
+//-----------------------------------------------------------------------
+
+#primary-content 
+{ 
+
+}
+
+#primary-sidebar {
+
+}

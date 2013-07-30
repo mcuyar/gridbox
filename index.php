@@ -37,11 +37,11 @@
         <link rel="apple-touch-icon" sizes="72×72" href="http://<?=$domain?>/touch-icon-72×72.png" />
         <link rel="apple-touch-icon" href="http://<?=$domain?>/touch-icon-iphone.png" /> <?php // size: 57x57 ?>
 
-        <!--[if (lt IE 9) ]><! internet explorer 8 stylesheet / html5 support -->
+        <!--[if (lt IE 9) ]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <link rel="stylesheet" href="http://<?=$domain?>/assets/ie.css"/>
         <!--<![endif]-->
-        <!--[if (gte IE 9)|!(IE)]><! modern browser stylesheet -->
+        <!--[if (gte IE 9)|!(IE)]><!-->
 		    <link rel="stylesheet" href="http://<?=$domain?>/assets/style.css"/>
         <!--<![endif]-->
         
@@ -49,22 +49,26 @@
         <script src="http://<?=$domain?>/assets/js/head.js"></script>
     </head>
     <body id="front" class="home"> <!-- ID should be generic: blog | category | single | calendar, Class should be specific -->
-        <div id="accessibility"> <!-- style should be set to display:none or visibility:hidden -->
+        <div id="accessibility" class="visuallyhidden"> <!-- style should be set to display:none or visibility:hidden -->
             <a href="#primary-menu">Skip to Navigation</a> |
             <a href="#primary-content">Skip to Content</a>
         </div>
         <!-- pre-wrapper --> 
     	<div id="container">
     	   <!-- pre-header --> 
-    		<div class="header-outer outer">
-    			<div class="header-inner inner">
-    				<header id="header" role="banner">
+    		<div class="header-outer outer navbar navbar-fixed-top">
+    			<div class="header-inner inner container">
+    				<header id="header" class="row show-grid" role="banner">
     					<!-- header-top --> 
-    					<div id="logo" class="logo logo-outer outer">
-    						<a href=""></a>
+    					<div id="logo" class="logo logo-outer outer col-lg-4 col-sm-2">
+                            <a class="" href="http://<?=$domain?>/">GridBox</a>
     					</div><!-- end #logo -->
-    					<nav id="primary-menu" class="menu-outer outer" role="navigation">
-    						<ul class="menu"></ul>
+    					<nav id="primary-menu" class="menu-outer outer navbar col-lg-8 col-sm-10" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
     					</nav>
     					<!-- header-bottom --> 
     				</header>
@@ -72,28 +76,66 @@
     		</div>
             <!-- post-header --> 
             <!-- pre-upper --> 
-            <div class="upper-outer outer">
-            	<div class="upper-inner inner">
+            <div id="slider-generic" class="upper-outer outer clearfix">
+            	<div class="upper-inner inner container">
             		<!-- upper-top --> 
-            		<section id="upper" class="upper-content">
-            			<!-- upper --> 
+            		<section id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                              <img src="http://<?=$domain?>/assets/images/index.png" alt="">
+                              <div class="carousel-caption">
+                                this is a carousel caption
+                              </div>
+                            </div>
+                            <div class="item">
+                              <img src="http://<?=$domain?>/assets/images/index-2.png" alt="">
+                              <div class="carousel-caption">
+                                this is a carousel caption 2
+                              </div>
+                            </div>
+                            <div class="item">
+                              <img src="http://<?=$domain?>/assets/images/index-3.png" alt="">
+                              <div class="carousel-caption">
+                                this is a carousel caption 3
+                              </div>
+                            </div>
+                        </div>
             		</section>
+            		<!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="icon-next"></span>
+                        </a>
             		<!-- uppper-bottom --> 
             	</div>
             </div>
             <!-- post-header --> 
             <!-- pre-content --> 
     		<main class="content-outer outer" role="main">
-    			<article class="content-inner inner">
+    			<article class="content-inner inner container">
     				<!-- content-top --> 
-    				<section id="primary-content">
-    					<!-- content --> 
-    				</section>
-    				<!-- content-bottom --> 
-    				<!-- margin-top --> 
-    				<aside id="primary-sidebar" class="margin">
-    				    <!-- margin --> 
-    				</aside>
+    				<div class="row">
+        				<section id="primary-content" class="col-sm-8 col-lg-8">
+        					<h1>This is a heading</h1>
+        					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna vehicula, sodales nibh id, imperdiet urna. Sed eu augue ultricies, porttitor nunc non, facilisis justo. Vivamus in justo sapien. Ut ultrices molestie tortor suscipit fermentum. Donec pulvinar vitae orci et condimentum. </p>
+        					   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna vehicula, sodales nibh id, imperdiet urna. Sed eu augue ultricies, porttitor nunc non, facilisis justo. Vivamus in justo sapien. Ut ultrices molestie tortor suscipit fermentum. Donec pulvinar vitae orci et condimentum. </p> 
+        				</section>
+        				<!-- content-bottom --> 
+        				<!-- margin-top --> 
+        				<aside id="primary-sidebar" class="col-sm-4 col-lg-4">
+        				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis magna vehicula, sodales nibh id, imperdiet urna. Sed eu augue ultricies, porttitor nunc non, facilisis justo. Vivamus in justo sapien. Ut ultrices molestie tortor suscipit fermentum. Donec pulvinar vitae orci et condimentum. </p> 
+        				</aside>
+    				</div>
     				<!-- margin-bottom -->
     			</article>
     		</main>
